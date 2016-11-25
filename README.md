@@ -1,21 +1,14 @@
-## CodeIgniter3.1-starter3
+## Distributing Our Diner
 
-This project can be used as a starter for a webapp built with CodeIgniter 3.1.
+This project can be used as a starter for a distributing our diner using RESTful distributed system techniques
 
-This starter builds on [CodeIgniter3.1-starter2](https://github.com/jedi-academy/CodeIgniter3.1-starter2),
-adding a base model with CRUD methods.
+started from https://github.com/NewGerard-Lab8/diner
+adding a base controller with CRUD methods.
 
-**controllers/Welcome.php** has been modified to set the name of the desired
-view file as a *data* parameter, and to then invoke the inherited *render*
-method to trigger presentation.
+The back-end webapp will have the following changes from the starter:
 
-A view template is provided. The CSS has been extracted to an appropriate file
-in the public folder. Styling could be improved by using a CSS framework, like
-Bootstrap.
-
-The **application/config/autoload.php** configuration has been modified
-to preload the template parser library and the url helper.
-
-Configure your web server or virtual host so that your project's
-document root maps to this **public** folder inside your project.
-
+- the Welcome controller will exist, but only to show a "go away" message
+- added a Maintenance controller, which acts as a REST server
+- all other controllers are removed
+- the only model you will have will be the Menu one; the others will be gone
+- incorporate the RESTful package from the Jedi Academy
