@@ -4,7 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends Application
 {
-
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('menu');
+        $this->data['pagetitle'] = 'Ng Diner';
+    }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -17,7 +22,7 @@ class Welcome extends Application
 	 * map to /welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-    public function index() {
+   /* public function index() {
         $result = '';
         $oddrow = true;
         foreach ($this->categories->all() as $category) {
@@ -26,6 +31,13 @@ class Welcome extends Application
             $oddrow = ! $oddrow;
         }
         $this->data['content'] = $result;
+        $this->render();
+    }*/
+    function index()
+    {
+        $this->load->helper('formfields');
+        $this->data['title'] = 'Ng Diner';
+        $this->data['pagebody'] = 'welcome_message';
         $this->render();
     }
 
